@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}{{ flower.name }} - Flower Shower{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <div class="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-8 mb-8">
+        <a href="{{ url_for('flower_list') }}" class="inline-flex items-center text-purple-600 hover:text-purple-800 mb-6">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to Flowers
+        </a>
+        
+        <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/3 mb-6 md:mb-0 md:mr-8">
+                <div class="w-full h-64 rounded-lg flex items-center justify-center {% if flower.name == 'Rose' %}bg-pink-100{% elif flower.name == 'Sunflower' %}bg-yellow-100{% elif flower.name == 'Tulip' %}bg-purple-100{% elif flower.name == 'Lily' %}bg-blue-100{% else %}bg-green-100{% endif %}">
+                    <span class="text-9xl">
+                        {% if flower.name == 'Rose' %}🌹
+                        {% elif flower.name == 'Tulip' %}🌷
+                        {% elif flower.name == 'Sunflower' %}🌻
+                        {% elif flower.name == 'Lily' %}🌺
+                        {% elif flower.name == 'Daisy' %}🌼
+                        {% else %}🌸{% endif %}
+                    </span>
+                </div>
+            </div>
+            
+            <div class="md:w-2/3">
+                <h1 class="text-4xl font-bold text-purple-800 mb-2">{{ flower.name }}</h1>
+                <p class="text-xl text-gray-600 mb-4">Color: {{ flower.color }}</p>
+                
+                <div class="bg-white rounded-lg p-4 mb-6">
+                    <h2 class="text-xl font-semibold text-purple-700 mb-2">Meaning & Symbolism</h2>
+                    <p class="text-gray-700">{{ flower.description }}</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-4">
+                    <h2 class="text-xl font-semibold text-purple-700 mb-2">Care Tips</h2>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Keep in a well-lit area with indirect sunlight</li>
+                        <li>Water regularly, keeping soil moist but not soggy</li>
+                        <li>Use a balanced fertilizer during growing season</li>
+                        <li>Remove wilted flowers to encourage new blooms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-8">
+        <h2 class="text-2xl font-bold text-purple-800 mb-4">More Flowers to Explore</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {% for i in range(1, 6) %}
+                {% if i != flower.id %}
+                <a href="{{ url_for('flower_detail', flower_id=i) }}" class="bg-white rounded-lg shadow p-4 hover:shadow-md transition text-center">
+                    <div class="h-20 rounded-lg mb-2 flex items-center justify-center {% if i == 1 %}bg-pink-100{% elif i == 2 %}bg-purple-100{% elif i == 3 %}bg-yellow-100{% elif i == 4 %}bg-blue-100{% else %}bg-green-100{% endif %}">
+                        <span class="text-3xl">
+                            {% if i == 1 %}🌹
+                            {% elif i == 2 %}🌷
+                            {% elif i == 3 %}🌻
+                            {% elif i == 4 %}🌺
+                            {% else %}🌼{% endif %}
+                        </span>
+                    </div>
+                </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %} 
