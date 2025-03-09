@@ -132,6 +132,23 @@ The application can also be deployed to other platforms such as:
 - AWS Amplify
 - GitHub Pages (with some configuration)
 
+## 🌿 Branch Structure
+
+This repository follows a structured branching strategy:
+
+- **main**: Production-ready code that has been thoroughly tested
+- **development**: Active development branch where new features are integrated
+- **feature/***:  Individual feature branches (branch off from development)
+- **bugfix/***:  Bug fix branches (branch off from development)
+- **release/***:  Release preparation branches
+
+### Workflow
+
+1. Development happens on feature branches branched from `development`
+2. Completed features are merged back into the `development` branch
+3. When ready for release, `development` is merged into `main`
+4. Critical hotfixes may be applied directly to `main` and then backported to `development`
+
 ## 🤝 Contributing
 
 Contributions are welcome! Here's how you can contribute:
