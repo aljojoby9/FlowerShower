@@ -1,81 +1,91 @@
-# Flower Shower
+# Flower Shower - Next.js Version
 
-A beautiful interactive web application that displays falling flowers and provides information about different types of flowers.
+A beautiful interactive web application that displays falling flowers and provides information about different types of flowers, built with Next.js and Tailwind CSS.
 
 ## Features
 
 - Interactive flower shower animation with customizable flower types
 - Collection of flowers with detailed information
 - Responsive design that works on all devices
-- Contact form for user feedback
+- Contact form with validation
 - About page with information about the project
+- Modern UI with Tailwind CSS
 
 ## Screenshots
 
-![Flower Shower Homepage](static/images/pexels-jonaskakaroto-736230.jpg)
+![Flower Shower Homepage](public/images/pexels-jonaskakaroto-736230.jpg)
 
-## Installation
+## Technologies Used
+
+- **Frontend**: React, Next.js, Tailwind CSS
+- **Backend**: Next.js API Routes, Server Components
+- **Deployment**: Vercel (recommended)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18.17 or later
+- npm or yarn
+
+### Installation
 
 1. Clone this repository:
 ```
-git clone https://github.com/yourusername/flower-shower.git
-cd flower-shower
+git clone https://github.com/aljojoby9/FlowerShower.git
+cd FlowerShower
 ```
 
-2. Create a virtual environment and activate it:
+2. Install dependencies:
 ```
-# Windows
-python -m venv venv
-venv\Scripts\activate
-
-# macOS/Linux
-python -m venv venv
-source venv/bin/activate
+npm install
+# or
+yarn install
 ```
 
-3. Install the required dependencies:
+3. Run the development server:
 ```
-pip install -r requirements.txt
-```
-
-## Usage
-
-1. Run the Flask application:
-```
-python app.py
+npm run dev
+# or
+yarn dev
 ```
 
-2. Open your web browser and navigate to:
+4. Open your browser and navigate to:
 ```
-http://127.0.0.1:5000/
+http://localhost:3000
 ```
-
-3. Enjoy the flower shower animation and explore the different features!
 
 ## Project Structure
 
 ```
 flower-shower/
-├── app.py                  # Flask application
-├── requirements.txt        # Python dependencies
-├── static/                 # Static files
-│   ├── css/                # CSS files
-│   ├── js/                 # JavaScript files
+├── app/                    # Next.js app directory
+│   ├── about/              # About page
+│   ├── api/                # API routes
+│   ├── contact/            # Contact page
+│   ├── flowers/            # Flowers pages
+│   ├── data.js             # Flower data
+│   ├── globals.css         # Global styles
+│   ├── layout.js           # Root layout
+│   └── page.js             # Home page
+├── components/             # React components
+│   ├── FlowerAnimation.js  # Flower animation component
+│   ├── FlowerCard.js       # Flower card component
+│   ├── Footer.js           # Footer component
+│   └── Navbar.js           # Navigation component
+├── public/                 # Static files
 │   └── images/             # Image files
-└── templates/              # HTML templates
-    ├── base.html           # Base template
-    ├── index.html          # Homepage
-    ├── flowers.html        # Flower collection
-    ├── flower_detail.html  # Individual flower details
-    ├── about.html          # About page
-    └── contact.html        # Contact page
+├── next.config.js          # Next.js configuration
+├── package.json            # Project dependencies
+├── postcss.config.js       # PostCSS configuration
+└── tailwind.config.js      # Tailwind CSS configuration
 ```
 
-## Technologies Used
+## Deployment
 
-- **Backend**: Python, Flask
-- **Frontend**: HTML, CSS, JavaScript, Tailwind CSS
-- **Templating**: Jinja2
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Contributing
 
