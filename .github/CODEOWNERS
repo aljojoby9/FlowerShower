@@ -1,0 +1,22 @@
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @aljojoby9 will be requested for review when someone
+# opens a pull request.
+*       @aljojoby9
+
+# Frontend code
+/app/                   @aljojoby9
+/components/            @aljojoby9
+
+# API routes
+/app/api/               @aljojoby9
+
+# CSS and styling related files
+*.css                   @aljojoby9
+/tailwind.config.js     @aljojoby9
+
+# Configuration files
+*.json                  @aljojoby9
+*.js                    @aljojoby9
+*.yml                   @aljojoby9
+*.md                    @aljojoby9 
