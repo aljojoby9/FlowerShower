@@ -4,6 +4,10 @@
 ![GitHub license](https://img.shields.io/github/license/aljojoby9/FlowerShower?color=blue)
 ![GitHub stars](https://img.shields.io/github/stars/aljojoby9/FlowerShower?style=social)
 
+[![CI](https://github.com/aljojoby9/FlowerShower/actions/workflows/ci.yml/badge.svg)](https://github.com/aljojoby9/FlowerShower/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/aljojoby9/FlowerShower/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/aljojoby9/FlowerShower/actions/workflows/codeql-analysis.yml)
+[![Dependabot Status](https://img.shields.io/badge/Dependabot-enabled-brightgreen.svg)](https://github.com/aljojoby9/FlowerShower/blob/main/.github/dependabot.yml)
+
 A beautiful interactive web application that displays falling flowers and provides information about different types of flowers. Built with Next.js and Tailwind CSS, this project showcases modern web development techniques and responsive design.
 
 ![Flower Shower Demo](public/images/pexels-jonaskakaroto-736230.jpg)
